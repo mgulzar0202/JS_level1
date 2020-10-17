@@ -32,60 +32,33 @@ if (a >= 0 && b >= 0){
 	x = a * b;
 	alert (x);
 }
-else (a > 0 && b < 0 || a < 0 && b > 0); {
+else if (a > 0 && b < 0 || a < 0 && b > 0); {
 	x = a + b;
 	alert (x);
 }
 </script>
 <!--4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.  -->
 <script>
-   let a = +prompt ('Введите число от 1 до 15', '');
+   let a = 6 ;
 		switch (a) {
+		case 0:
 		case 1:
-			alert ( '1');
-			break;
 		case 2:
-			alert ( '2');
-			break;
 		case 3:
-			alert ( '3');
-			break;
 		case 4:
-			alert ( '4');
-			break;
 		case 5:
-			alert ( '5');
-			break;
 		case 6:
-			alert ( '6');
-			break;
 		case 7:
-			alert ( '7');
-			break;
 		case 8:
-			alert ( '8');
-			break;
 		case 9:
-			alert ( '9');
-			break;
 		case 10:
-			alert ( '10');
-			break;
 		case 11:
-			alert ( '11');
-			break;
 		case 12:
-			alert ( '12');
-			break;
 		case 13:
-			alert ( '13');
-			break;
 		case 14:
-			alert ( '14');
-			break;
 		case 15:
-			alert ( '15');
-			break;	
+			alert ( '6 7 8 9 10 11 12 13 14 15');
+			break;
 		}	
 </script>
 <!-- 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.-->
@@ -111,9 +84,10 @@ operation – строка с названием операции. В завис
 <script>
 function tmathOperation(arg1, arg2, operation) {
     let res;
-     if (arg1 == '') {
+     if (!arg1 || !arg2 || !operation) {
         alert("Не все данные заполнены");
-    } else {
+    } 
+	else {
     switch (operation) {
     case 'subtraction':
     res = subtraction(arg1, arg2);
@@ -145,7 +119,8 @@ function division(a, b) {
     if (b != 0) {
     var div = a/b;
     return "Деление чисел = " + div.toFixed(2);
-    } else {
+    } 
+	else {
     alert("На ноль нельзя делить!");
     }
 }
